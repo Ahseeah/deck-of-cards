@@ -1,12 +1,27 @@
-:root {
-  font: 16px / 1 sans-serif;
+.card {
+  display: inline-block;
+  text-align: center;
+  margin: 5px;
+  padding: 18px 15px 0 15px;
+  width: 70px;
+  height: 40px;
+
+  font-size: 22px;
+  background-color: lavenderblush;
+  border: solid 1px black;
 }
 
-html {
-  height: 100%;
+.hearts {
+  background-color: #b85b59;
+  border: solid 1px #9c4f5d;
+  color: #f54262;
 }
 
-body {
-  margin: 0;
-  min-height: 100%;
+.diamonds {
+  background-color: rgb(231, 69, 69);
+  border: solid 1px red;
+  color: #470914;
+}
+
+.spades {
 }
