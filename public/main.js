@@ -24,7 +24,10 @@ const makeDeck = () => {
     // and for each rank
     for (let j = 0; j < ranks.length; j++) {
       // make a card
-      let card = suits[i] + ' of ' + ranks[j]
+      const card = {
+        suits: suits[i],
+        ranks: ranks[j]
+      }
       deck.push(card)
     }
   }
@@ -40,6 +43,7 @@ const shuffleDeck = () => {
     deck[i] = cardJ
   }
   // Shuffle the deck
+  console.log(deck)
 }
 
 const drawCard = () => {
@@ -57,14 +61,14 @@ const drawCard = () => {
     // - append to the element
   }
 }
-
 const main = () => {
   makeDeck()
   shuffleDeck()
   console.log(deck)
-  const button = document.querySelector('.dealCard')
-  button.addEventListener('click', drawCard)
+  //const button = document.querySelector('.dealCard')
+
   // drawCard()
 }
 
 document.addEventListener('DOMContentLoaded', main)
+document.querySelector('.dealCard').addEventListener('click', drawCard)
